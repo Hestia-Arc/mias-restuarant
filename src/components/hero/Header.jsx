@@ -1,17 +1,33 @@
 import { Box, Stack, Typography, styled } from "@mui/material";
 import React from "react";
 import { theme } from "../../theme/theme";
+import { Link } from "react-router-dom";
 
 const StyledText = styled(Typography)({
   fontSize: "0.8rem",
+  opacity: 0.8,
+  
+
+  "a": {
+    textDecoration: 'none',
+    color: 'inherit',
+
+    "&:active": {
+      color: theme.palette.primary.main
+    },
+
+    "&:hover": {
+      color: theme.palette.primary.main
+    }
+  }
 });
 function Header() {
   return (
     <header
       style={{
         height: "5rem",
-        position: "fixed",
-        top: "20px",
+        position: "absolute",
+        top: "40px",
         left: "0px",
         right: "0px",
         zIndex: "999",
@@ -51,11 +67,11 @@ function Header() {
         </Stack>
 
         <Stack direction="row" justifyContent="center" spacing={8}>
-          <StyledText>Home</StyledText>
+          <StyledText><Link to='/'>Home</Link></StyledText>
           <StyledText>Menu</StyledText>
           <StyledText>About</StyledText>
           <StyledText>Order</StyledText>
-          <StyledText>Reservations</StyledText>
+          <StyledText><Link to='/reservation'>Reservations</Link></StyledText>
         </Stack>
       </nav>
     </header>

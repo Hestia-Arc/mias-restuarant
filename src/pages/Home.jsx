@@ -4,10 +4,11 @@ import About from '../components/about/About'
 import Menus from '../components/menus/Menus'
 import Contact from '../components/contact/Contact'
 import Footer from '../components/footer/Footer'
+import { Box } from '@mui/material'
 
 function Home() {
   return (
-    <>
+    <Box sx={{position: 'relative'}}>
     
     <Hero/>
     <About/>
@@ -15,7 +16,7 @@ function Home() {
     <Contact/>
     <Footer/>
 
-    </>
+    </Box>
   )
 }
 
