@@ -1,9 +1,37 @@
 import React from "react";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Divider, Stack, Typography, styled } from "@mui/material";
 import hero from "../../assets/hero-large.jpg";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import { theme } from "../../theme/theme";
+import Under2 from "../../UI/Under2";
+
+const StyledCard = () => {
+  return (
+    <Stack
+      spacing={2}
+      alignItems="center"
+      justifyContent="center"
+      // sx={{ border: "1px solid black" }}
+    >
+      <Box>
+        {/* <img /> */}
+        <h3>ICON</h3>
+      </Box>
+      <Typography sx={{ fontSize: "0.8rem", fontWeight: 700 }}>
+        <em>Tantalizing the taste bud</em>
+      </Typography>
+      <Typography sx={{ fontSize: "0.8rem", textAlign: "center" }}>
+        At Mia's kitchen, our passion lies in crafting dishes that not only
+        tantalize the taste buds and leave a lasting impression.
+      </Typography>
+
+      <Under2 />
+
+      {/* <Button variant="contained" size="small" sx={{textTransform: 'capitalize'}}>Buy now</Button> */}
+    </Stack>
+  );
+};
 
 function Hero() {
   return (
@@ -39,14 +67,7 @@ function Hero() {
         >
           <Box
             sx={{
-              // background: "brown",
-              // height: "400px",
-              width: "45%",
-              // borderTopRightRadius: "200px",
-              // borderBottomRightRadius: "200px",
-              // position: "absolute",
-              // top: '25%',
-              // left: -20,
+              width: "50%",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -60,7 +81,7 @@ function Hero() {
               height: "400px",
               borderTopLeftRadius: "200px",
               borderBottomLeftRadius: "200px",
-              width: "43%",
+              width: "48%",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -79,10 +100,11 @@ function Hero() {
               }}
             >
               <Typography variant="h4">Real food, fast & Delicious</Typography>
-              <Typography sx={{fontSize: '0.8rem'}}>
+              <Typography sx={{ fontSize: "0.8rem" }}>
                 We imagine a world where there’s no such thing as a bad cup of
-                coffee and all coffee farmers live prosperously.
-                We imagine a world where there’s no such thing as a bad cup of coffee and all coffee farmers live prosperously.
+                coffee and all coffee farmers live prosperously. We imagine a
+                world where there’s no such thing as a bad cup of coffee and all
+                coffee farmers live prosperously.
               </Typography>
               <Stack direction="row" spacing={3}>
                 <Button variant="contained" color="secondary">
@@ -104,53 +126,28 @@ function Hero() {
       {/* ------------------below fold */}
       <Box
         sx={{
-          height: "20rem",
+          height: "25rem",
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
+          // alignItems: "center",
         }}
       >
         <Stack
           direction="row"
           spacing={5}
           sx={{
-            height: "10rem",
+            // border: "1px solid blue",
+            // height: "10rem",
             // background: "#000",
             width: "80%",
             display: "flex",
           }}
         >
-          <Box
-            sx={{
-              height: "100%",
-              background: theme.palette.primary.main,
-              width: "20%",
-            }}
-          ></Box>
-          <Box
-            sx={{
-              height: "100%",
-              width: "20%",
-              border: "1px solid",
-              borderColor: theme.palette.primary.main,
-            }}
-          ></Box>
-          <Box
-            sx={{
-              height: "100%",
-              width: "20%",
-              border: "1px solid",
-              borderColor: theme.palette.primary.main,
-            }}
-          ></Box>
-          <Box
-            sx={{
-              height: "100%",
-              width: "20%",
-              border: "1px solid",
-              borderColor: theme.palette.primary.main,
-            }}
-          ></Box>
+          <StyledCard />
+          <Divider />
+          <StyledCard />
+          <Divider />
+          <StyledCard />
         </Stack>
       </Box>
     </>

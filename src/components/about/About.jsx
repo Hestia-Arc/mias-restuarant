@@ -26,7 +26,7 @@ function About() {
         alignItems: "end",
         position: "relative",
       }}
-      mb={5}
+      // mb={5}
     >
 
       {/* --------------STRIPE */}

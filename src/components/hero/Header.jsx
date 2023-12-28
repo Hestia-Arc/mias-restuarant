@@ -25,7 +25,7 @@ function Header() {
   return (
     <header
       style={{
-        height: "5rem",
+        height: "4rem",
         position: "absolute",
         top: "40px",
         left: "0px",
@@ -50,20 +50,20 @@ function Header() {
           alignItems="center"
           justifyContent="center"
           sx={{
-            width: "120px",
-            border: "1px solid ",
-            borderColor: theme.palette.secondary.main,
-            borderRadius: "30px",
+            width: "180px",
+            // border: "1px solid ",
+            backgroundColor: theme.palette.secondary.main,
+            borderRadius: "3px",
             padding: "5px 1rem",
           }}
         >
           <Typography
-            color="secondary"
-            sx={{ fontSize: "20px", fontWeight: 700 }}
+            // color="secondary"
+            sx={{ fontSize: "18px", fontWeight: 700 }}
           >
-            Mia's
+            Chilli & Clove
           </Typography>
-          <span style={{ fontSize: "12px" }}>Kitchen</span>
+          <span style={{ fontSize: "12px" }}>Restaurant</span>
         </Stack>
 
         <Stack direction="row" justifyContent="center" spacing={8}>
