@@ -1,4 +1,4 @@
-import { Box, Typography, keyframes } from "@mui/material";
+import { Box, Stack, Typography, keyframes, styled } from "@mui/material";
 import React, { useState } from "react";
 // import Underline from "../../UI/Underline";
 // import ab from "../../assets/about-2.jpg";
@@ -20,6 +20,12 @@ import { Outlet } from "react-router-dom";
 //   opacity: 1;
 // }
 // `;
+
+const StyledMenu = styled(Typography)({
+  fontSize: "6rem",
+  color: '#fff',
+  lineHeight: 1
+});
 // -------------------------
 function Menus() {
   // const [menus, setMenu] = useState(specials);
@@ -45,23 +51,35 @@ function Menus() {
         {/* left */}
         <Box
           sx={{
-            background: "grey",
-            backgroundImage: `linear-gradient(to right, rgba(0,0,0,.3),rgba(0,0,0,.5)), url(${aa})`,
-            backgroundPosition: "50% 54%",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            flex: 1,
+            background: "rgba(35,34,35,1)",
+            // backgroundImage: `linear-gradient(to right, rgba(0,0,0,.3),rgba(0,0,0,.5)), url(${aa})`,
+            // backgroundPosition: "50% 54%",
+            // backgroundRepeat: "no-repeat",
+            // backgroundSize: "cover",
+            width: "300px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: "0px 15px 15px 0px",
           }}
         >
-          <Typography
+          {/* <Typography
             sx={{
+              // translate(-197px, 10px)
               fontSize: '7rem',
               color: "#fff",
-              transform: "rotate(-90deg) translate(-197px, 10px)",
+              transform: "rotate(-90deg)",
             }}
           >
             MENUS
-          </Typography>
+          </Typography> */}
+          <Stack alignItems="center">
+            <StyledMenu>M</StyledMenu>
+            <StyledMenu>E</StyledMenu>
+            <StyledMenu>N</StyledMenu>
+            <StyledMenu>U</StyledMenu>
+
+          </Stack>
         </Box>
 
         {/* right */}
