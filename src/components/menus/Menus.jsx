@@ -41,9 +41,19 @@ function CustomTabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 2 }}>
-          <Typography>{children}</Typography>
-        </Box>
+        <Stack
+          direction="row"
+          justifyContent="center"
+          spacing={3}
+          mt={2}
+          sx={{
+            p: " 1rem",
+            minHeight: "380px",
+            // border: "1px solid cyan"
+          }}
+        >
+          {children}
+        </Stack>
       )}
     </div>
   );
@@ -95,7 +105,15 @@ function Menus() {
       </Box>
 
       {/* -------------------TABS-------------- */}
-      <Box sx={{ width: "100%", color: "#fff", padding: "0 5rem" }}>
+      <Box
+        sx={{
+          width: "100%",
+          height: "460px",
+          color: "#fff",
+          padding: "0 5rem",
+          // border: "1px solid green",
+        }}
+      >
         <Box
           sx={{
             borderTop: 1,
@@ -156,21 +174,20 @@ function Menus() {
               {...a11yProps(2)}
               sx={tabStyle}
             />
-             <Tab
+            <Tab
               label={
                 <Chip
                   label="swallow"
                   color={active === 4 ? "secondary" : "text"}
-                  // sx={{ color: active === 3 ? "" : "#fff" }}
                   onClick={() => {
                     setActive(4);
                   }}
                 />
               }
-              {...a11yProps(2)}
+              {...a11yProps(3)}
               sx={tabStyle}
             />
-             <Tab
+            <Tab
               label={
                 <Chip
                   label="drinks"
@@ -181,37 +198,34 @@ function Menus() {
                   }}
                 />
               }
-              {...a11yProps(2)}
+              {...a11yProps(4)}
               sx={tabStyle}
             />
-            {/* -- */}
             <Tab
               label={
                 <Chip
                   label="specials"
                   color={active === 6 ? "secondary" : "text"}
-                  // sx={{ color: active === 3 ? "" : "#fff" }}
                   onClick={() => {
                     setActive(6);
                   }}
                 />
               }
-              {...a11yProps(6)}
+              {...a11yProps(5)}
               sx={tabStyle}
             />
 
-<Tab
+            <Tab
               label={
                 <Chip
                   label="best-delivered"
                   color={active === 7 ? "secondary" : "text"}
-                  // sx={{ color: active === 3 ? "" : "#fff" }}
                   onClick={() => {
                     setActive(7);
                   }}
                 />
               }
-              {...a11yProps(7)}
+              {...a11yProps(6)}
               sx={tabStyle}
             />
             <Tab
@@ -219,33 +233,80 @@ function Menus() {
                 <Chip
                   label="lunch-box"
                   color={active === 8 ? "secondary" : "text"}
-                  // sx={{ color: active === 3 ? "" : "#fff" }}
                   onClick={() => {
                     setActive(8);
                   }}
                 />
               }
-              {...a11yProps(8)}
+              {...a11yProps(7)}
               sx={tabStyle}
             />
-            
           </Tabs>
         </Box>
+
+        {/* --1 */}
         <CustomTabPanel value={value} index={0}>
+          <MenuItem tag='White Rice' />
+          <MenuItem tag='Fried Rice'/>
+          <MenuItem tag=''/>
+        </CustomTabPanel>
+
+        {/* --2 */}
+        <CustomTabPanel value={value} index={1}>
+        <MenuItem tag='Beef stew' />
+          <MenuItem tag='Fish stew' />
+          <MenuItem tag='Garden-Egg stew'/>
+        </CustomTabPanel>
+
+        {/* --3 */}
+        <CustomTabPanel value={value} index={2}>
+        <MenuItem />
+          <MenuItem />
           <MenuItem />
         </CustomTabPanel>
-        <CustomTabPanel value={value} index={1}>
-          Item Two
+
+        {/* --4 */}
+        <CustomTabPanel value={value} index={3}>
+        <MenuItem />
+          <MenuItem />
+          <MenuItem />
         </CustomTabPanel>
-        <CustomTabPanel value={value} index={2}>
-          Item Three
+
+         {/* --5 */}
+         <CustomTabPanel value={value} index={4}>
+        <MenuItem />
+          <MenuItem />
+          <MenuItem />
+        </CustomTabPanel>
+
+         {/* --6 */}
+         <CustomTabPanel value={value} index={5}>
+        <MenuItem />
+          <MenuItem />
+          <MenuItem />
+        </CustomTabPanel>
+
+         {/* --7 */}
+         <CustomTabPanel value={value} index={6}>
+        <MenuItem />
+          <MenuItem />
+          <MenuItem />
+        </CustomTabPanel>
+
+         {/* --8 */}
+         <CustomTabPanel value={value} index={7}>
+        <MenuItem />
+          <MenuItem />
+          <MenuItem />
         </CustomTabPanel>
       </Box>
 
       {/* -------------------- */}
       {/* background: "rgba(35,34,35,1)", */}
 
-      <Box sx={{ height: "150px" }}></Box>
+      <Box
+        sx={{ height: "40px", borderTop: 1, borderColor: "rgba(35,34,35,1)" }}
+      ></Box>
     </Box>
   );
 }
