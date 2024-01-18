@@ -6,7 +6,7 @@ import Header from "./Header";
 import { theme } from "../../theme/theme";
 import Under2 from "../../UI/Under2";
 
-const StyledCard = () => {
+const StyledCard = ({tag, text}) => {
   return (
     <Stack
       spacing={2}
@@ -19,11 +19,10 @@ const StyledCard = () => {
         <h3>ICON</h3>
       </Box>
       <Typography sx={{ fontSize: "0.8rem", fontWeight: 700 }}>
-        <em>Tantalizing the taste bud</em>
+        <em>{tag}</em>
       </Typography>
       <Typography sx={{ fontSize: "0.8rem", textAlign: "center" }}>
-        At Mia's kitchen, our passion lies in crafting dishes that not only
-        tantalize the taste buds and leave a lasting impression.
+        {text}
       </Typography>
 
       <Under2 />
@@ -143,11 +142,14 @@ function Hero() {
             display: "flex",
           }}
         >
-          <StyledCard />
+          <StyledCard tag='Tantalizing the taste bud' text="At Mia's kitchen, our passion lies in crafting dishes that not only
+        tantalize the taste buds and leave a lasting impression." />
           <Divider />
-          <StyledCard />
+          <StyledCard tag='Fresh Ingredients' text="At Mia's kitchen, our passion lies in crafting dishes that not only
+        tantalize the taste buds and leave a lasting impression." />
           <Divider />
-          <StyledCard />
+          <StyledCard tag='Happy Clients' text="At Mia's kitchen, our passion lies in crafting dishes that not only
+        tantalize the taste buds and leave a lasting impression."/>
         </Stack>
       </Box>
     </>

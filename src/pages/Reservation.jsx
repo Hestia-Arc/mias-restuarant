@@ -34,7 +34,7 @@ function Reservation() {
             color: '#fff'
           }}
         >
-          <Typography variant="h2">Reservations</Typography>
+          <Typography variant="h2">Book a Table</Typography>
         </Box>
       </Box>
     </Box>

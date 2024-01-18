@@ -4,8 +4,6 @@ import { Box, CssBaseline } from "@mui/material";
 import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
 import Reservation from "./pages/Reservation";
-import MoreMenu from "./pages/MoreMenu";
-import MenuMenu from "./pages/MenuMenu";
 
 function App() {
   // Cuisine D’Amour
@@ -16,10 +14,7 @@ function App() {
       <CssBaseline />
 
       <Routes>
-        <Route path="/" exact element={<Home />}>
-          <Route index element={<MenuMenu />} />
-          <Route path="/moremenu" element={<MoreMenu />} />
-        </Route>
+        <Route path="/" exact element={<Home />} />
         <Route path="reservation" element={<Reservation />} />
       </Routes>
     </Box>

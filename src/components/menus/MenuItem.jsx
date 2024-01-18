@@ -1,7 +1,6 @@
 import React from 'react'
-import aa from "../assets/story2.jpg";
+import aa from "../../assets/story2.jpg";
 import { Box, Stack, Typography, keyframes, styled } from "@mui/material";
-import { theme } from "../theme/theme";
 import { Link } from "react-router-dom";
 
 
@@ -12,7 +11,7 @@ const StyledText = styled(Typography)({
   color: "#fff",
 });
 
-const MenuBox = () => {
+const MenuItem = () => {
   return (
     <Box
       sx={{
@@ -49,23 +48,6 @@ const MenuBox = () => {
     </Box>
   );
 };
-function MenuMenu() {
-  return (
-    <Stack
-    direction="row"
-    flexWrap="wrap"
-    gap={5}
-    sx={{ padding: "2rem" }}
-  >
-    <MenuBox />
-    <MenuBox />
-    <MenuBox />
-    <MenuBox />
-    <MenuBox />
-    <MenuBox />
-   
-  </Stack>
-    )
-}
 
-export default MenuMenu
+
+export default MenuItem

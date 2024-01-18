@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from '../components/hero/Hero'
 import About from '../components/about/About'
 import Menus from '../components/menus/Menus'
-import Contact from '../components/contact/Contact'
+import Order from '../components/order/Order'
 import Footer from '../components/footer/Footer'
 import { Box } from '@mui/material'
 
@@ -13,7 +13,7 @@ function Home() {
     <Hero/>
     <About/>
     <Menus/>
-    <Contact/>
+    <Order/>
     <Footer/>
 
     </Box>
