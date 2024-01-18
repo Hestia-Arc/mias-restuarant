@@ -13,7 +13,7 @@ export const theme = createTheme({
       contrastText: '#fff'
     },
     text: {
-      main: '#fff',
+      main: 'rgba(35,34,35,1)',
       // main: '#284c66',
       contrastText: '#fff'
     }
