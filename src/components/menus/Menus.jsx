@@ -1,10 +1,12 @@
 import {
   Box,
   Chip,
+  Fade,
   Stack,
   Tab,
   Tabs,
   Typography,
+  Zoom,
   keyframes,
   styled,
 } from "@mui/material";
@@ -41,6 +43,10 @@ function CustomTabPanel(props) {
       {...other}
     >
       {value === index && (
+        <Fade in={value === index} 
+        {...(value === index ? { timeout: 2000 } : {})}
+
+        >
         <Stack
           direction="row"
           justifyContent="center"
@@ -54,6 +60,7 @@ function CustomTabPanel(props) {
         >
           {children}
         </Stack>
+        </Fade>
       )}
     </div>
   );
